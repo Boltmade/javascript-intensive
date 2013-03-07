@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>ex5</title>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+		<script type="text/javascript">//<![CDATA[
+			$(document).ready(function(){
+				$('form').submit(function(e){
+					$('.error').remove();
+					if(! (/.+@.+\..+/.test($(this).find('input[name=email]').val()))) {
+						e.preventDefault();
+						$('form').prepend("<p class='error'>Invalid email!</p>");
+					}
+				});
+			});
+		//]]>
+		</script>
+	</head>
+
+	<body>
+		<form action="/someEndpoint">
+			<input name="email" type="text" />
+			<input type="submit" />
+		</form>
+	</body>
+</html>

@@ -1,0 +1,55 @@
+== JavaScript fundamentals, DOM manipulation, and developer tooling ==
+
+Tour of the Chrome Developer Tools and/or Firebug
+The two kinds of <script> tags (includes and inline)
+Dynamic typing and scoping in a browser context (window, var, typeof)
+Debugging with alert, prompt, and console.log
+Strings and Regular expressions (including literals, match, test, and new RegExp)
+Objects, object literals, and properties (JSON)
+Introduction to the DOM: document, getElementsByTagName, and getElementById
+Truthyness and Falsyness (result of boolean expression is actual value)
+Native loops: advantages and pitfalls
+Exercise: cross-browser getElementsByClassName (ex1.html)
+Higher-order and anonymous functions (see map.js)
+Prototypes, prototype inheritance, and the this keyword (prototype*.js)
+The many ways to handle events (events.js)
+Exercise: cross-browser event handling (ex2.html)
+Moar DOM: createElement, appendChild, and innerHTML
+Exercise: adding items to a list (ex3.html)
+
+== jQuery and Underscore, an easier way to select and iterate ==
+
+Iteration toolbox in jQuery and Underscore: filter, each, map, flatten, reduce, zip, range
+CSS selectors with SizzleJS are jQuery's DOM selection toolbox
+jQuery attribute syntax (setter/getter helpers: attr, removeAttr, val)
+jQuery event handling
+Exercise: form validation (ex4.html)
+The self-validating <input/> types
+How to use data-* attributes
+Basic animation (animation.html)
+DOM node creation and insertion
+Exercise: display form validation errors (ex5.html)
+
+== AJAX: getting and sending data  ==
+
+jQuery.ajax GET, basic syntax and JSON handling (ajax.html)
+Callbacks, asynchronous requests, and single-threaded JavaScript
+AJAH: sending down HTML snippets
+jQuery.ajax POST and PUT (and the limitations on HTTP verbs)
+jQuery.ajax error handling (mention complete handler as well)
+Exercise: submit the form via AJAX and handle errors
+The cross-domain security policy and JSONP
+
+== jQuery internals: building and using plugins ==
+
+(Mostly follow http://docs.jquery.com/Plugins/Authoring)
+
+Plug-ins as the way to extend jQuery
+An example: using the typeahead plugin
+jQuery.fn and namespacing
+Exercise: writing a simple plugin 
+Chaining and the plugin return value
+Idiomatic plugin options (with defaults!)
+Namespaced events
+Custom events
+Exercise: form validation plug-in

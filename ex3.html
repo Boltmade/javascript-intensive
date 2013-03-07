@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>ex3</title>
+
+
+		<script type="text/javascript">//<![CDATA[
+			function evbind(el, ev, handler) {
+				if(el.addEventListener) {
+					el.addEventListener(ev, handler, false);
+				} else if(el.attachEvent) {
+					el.attachEvent('on'+ev, function() {handler.apply(el);});
+				}
+			}
+
+			evbind(window, 'load', function() {
+				evbind(document.getElementById('addButton'), 'click', function() {
+					var li = document.createElement('li');
+					li.innerHTML = document.getElementById('newText').value;
+					document.getElementById('someList').appendChild(li);
+				});
+			})
+		//]]>
+		</script>
+	</head>
+
+	<body>
+		<ol id="someList">
+			<li>Existing Element</li>
+		</ol>
+
+		<input type="text" id="newText" />
+		<button type="button" id="addButton">Add Item</button>
+	</body>
+</html>

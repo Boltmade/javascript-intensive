@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>ajax</title>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+		<script type="text/javascript">//<![CDATA[
+			$(document).ready(function(){
+				$.ajax({
+					"url": "http://localhost:3000/?q=a",
+					"dataType": "json",
+					"success": function(r) {
+						$('body').append("<div>Count: " + r.count + "</div>");
+						$('body').append("<div>Results: " + r.items[0] + "</div>");
+					},
+					"error": function(xhr) {
+						$('body').append(xhr.responseText);
+					}
+				});
+			});
+		//]]>
+		</script>
+	</head>
+
+	<body>
+	</body>
+</html>
